@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test-front-metasix/static/css/main.a4bcac9b.chunk.css",
+    "main.js": "/test-front-metasix/static/js/main.51b4856a.chunk.js",
+    "main.js.map": "/test-front-metasix/static/js/main.51b4856a.chunk.js.map",
+    "runtime-main.js": "/test-front-metasix/static/js/runtime-main.368ce583.js",
+    "runtime-main.js.map": "/test-front-metasix/static/js/runtime-main.368ce583.js.map",
+    "static/js/2.2894ab0c.chunk.js": "/test-front-metasix/static/js/2.2894ab0c.chunk.js",
+    "static/js/2.2894ab0c.chunk.js.map": "/test-front-metasix/static/js/2.2894ab0c.chunk.js.map",
+    "index.html": "/test-front-metasix/index.html",
+    "precache-manifest.aef828bc3623a3c6df0da875459d8489.js": "/test-front-metasix/precache-manifest.aef828bc3623a3c6df0da875459d8489.js",
+    "service-worker.js": "/test-front-metasix/service-worker.js",
+    "static/css/main.a4bcac9b.chunk.css.map": "/test-front-metasix/static/css/main.a4bcac9b.chunk.css.map",
+    "static/js/2.2894ab0c.chunk.js.LICENSE": "/test-front-metasix/static/js/2.2894ab0c.chunk.js.LICENSE",
+    "static/media/logo.png": "/test-front-metasix/static/media/logo.75a026ed.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.368ce583.js",
+    "static/js/2.2894ab0c.chunk.js",
+    "static/css/main.a4bcac9b.chunk.css",
+    "static/js/main.51b4856a.chunk.js"
+  ]
+}
