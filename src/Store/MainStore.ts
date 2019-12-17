@@ -1,4 +1,4 @@
-import { configure, observable, action, runInAction } from "mobx";
+import { configure, observable, action, runInAction, computed } from "mobx";
 
 import { Get } from "Service/request";
 import { formatDate } from "Utils/dateFormat";
@@ -7,10 +7,28 @@ configure({ enforceActions: "always" });
 
 export class MainStore {
   @observable loading = false;
-  @observable faq: Array<Faq> = [];
+  @observable allFaq: Array<Faq> = [];
+
+  @observable searchString = "";
 
   constructor() {
     this.getFaqs();
+  }
+
+  @action
+  onSearchChange = (str: string) => {
+    this.searchString = str;
+  };
+
+  @computed
+  get searchFaq() {
+    if (this.searchString !== "") {
+      const search = new RegExp(this.searchString, "i");
+
+      return this.allFaq.filter(faq => search.test(faq.question));
+    }
+
+    return this.allFaq;
   }
 
   @action
@@ -25,7 +43,7 @@ export class MainStore {
         .map(data => ({ ...data, updatedAt: formatDate(data.updatedAt) }));
 
       runInAction(() => {
-        this.faq = faqs;
+        this.allFaq = faqs;
       });
     } catch (error) {
       console.warn("Error", error.message);
@@ -38,8 +56,8 @@ export class MainStore {
 
   @action
   removeFaq = (faqId: string) => {
-    const idx = this.faq.findIndex(i => i.objectId === faqId);
-    if (idx !== undefined) this.faq.splice(idx, 1);
+    const idx = this.allFaq.findIndex(i => i.objectId === faqId);
+    if (idx !== undefined) this.allFaq.splice(idx, 1);
   };
 }
 

@@ -18,3 +18,15 @@ export function useToggleSelection<T>(value: T) {
     select
   };
 }
+
+export const useInput = (init: string = "") => {
+  const [value, setValue] = useState(init);
+  const onChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value),
+    []
+  );
+  return {
+    value,
+    onChange
+  };
+};

@@ -22,7 +22,7 @@ export const FaqList = observer(() => {
 
   return (
     <ul className="faq__list">
-      {mainStore.faq.map(item => (
+      {mainStore.searchFaq.map(item => (
         <li key={item.objectId} onClick={() => select(item.objectId)}>
           <div className="question">
             <p>{item.question}</p>
