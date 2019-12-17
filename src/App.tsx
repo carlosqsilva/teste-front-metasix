@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Header } from "./Components/Header";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import { NotFound } from "Views/NotFound";
 import { FaqView } from "Views/Faq";
@@ -9,7 +9,7 @@ import { Navbar } from "Components/Navbar";
 
 export default () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Fragment>
         <Header />
 
@@ -26,6 +26,6 @@ export default () => {
           </div>
         </Content>
       </Fragment>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
