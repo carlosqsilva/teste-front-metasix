@@ -1,0 +1,58 @@
+.faq__menu {
+  --padding: 1rem;
+
+  height: 2rem;
+  background-color: var(--blue);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0 var(--padding);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  &_header {
+    flex: 1;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  &_options {
+    align-self: stretch;
+    margin-right: calc(-1 * var(--padding));
+    display: none;
+
+    button {
+      @include reset-button;
+
+      height: 100%;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      padding: 0 1rem;
+      min-width: 5rem;
+
+      + button {
+        border-left: solid 1px var(--body-bg);
+      }
+
+      svg {
+        font-size: 1.2rem;
+        vertical-align: middle;
+      }
+
+      span {
+        margin-left: 0.6rem;
+      }
+    }
+  }
+
+  @include for_breakpoint(desktop) {
+    &_options {
+      display: initial;
+    }
+  }
+}

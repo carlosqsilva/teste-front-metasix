@@ -1,0 +1,75 @@
+.faq__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  margin-bottom: 1rem;
+
+  .title {
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  form input {
+    appearance: none;
+    background: #fff;
+    border: solid 1px rgb(232, 232, 232);
+    border-radius: 8px;
+    color: var(--black);
+    font-size: 1rem;
+
+    padding: 0.3rem 0.8rem;
+    flex: 1;
+    // min-width: 300px;
+    margin-right: 1rem;
+  }
+
+  form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  form button {
+    // @include reset-button;
+
+    border-radius: 8px;
+    padding: 0.4rem 0.7rem;
+
+    background: var(--blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin-left: 0.5rem;
+    }
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  @include for_breakpoint(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      margin: 0;
+    }
+
+    form {
+      flex: unset;
+    }
+
+    form input {
+      flex: unset;
+      min-width: 290px;
+    }
+  }
+}

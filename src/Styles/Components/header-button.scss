@@ -1,0 +1,27 @@
+.button {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+
+  & svg {
+    font-size: 1.4rem;
+  }
+
+  & + & {
+    margin-left: 2rem;
+  }
+
+  // &:hover {
+  // background-color: rgba();
+  // }
+}

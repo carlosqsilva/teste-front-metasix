@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blue);
+
+  position: sticky;
+  top: 0;
+
+  height: 3.5rem;
+  padding: 0.5rem;
+
+  & .logo {
+    width: auto;
+    height: 100%;
+  }
+
+  @include for_breakpoint(desktop) {
+    height: 5.5rem;
+    padding: 1.2rem 2rem;
+  }
+}

@@ -1,0 +1,23 @@
+.collapse {
+  --height: 0;
+
+  transform: translateZ(0);
+  transition: all 300ms ease-in-out;
+  overflow: hidden;
+
+  &.exited {
+    height: 0;
+  }
+
+  &.exiting {
+    height: 0;
+  }
+
+  &.entering {
+    height: var(--height);
+  }
+
+  &.entered {
+    height: var(--height);
+  }
+}

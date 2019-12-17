@@ -1,0 +1,9 @@
+main[class="container"] {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1rem;
+
+  @include for_breakpoint(desktop) {
+    padding: 2rem;
+  }
+}
